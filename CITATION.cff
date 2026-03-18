@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use the ESF Community Toolkit, please cite it as below."
+type: software
+title: "ESF Community Toolkit"
+abstract: >-
+  A lightweight, domain-agnostic version of the Epistemic Stewardship Framework
+  for maintaining intellectual ownership in AI-assisted work. Five practices:
+  Position Statement, Five Questions, Records of Resistance, AI Use Log, and
+  Disclosure. Works with any AI tool, any discipline, any project.
+authors:
+  - family-names: Madrid
+    given-names: Nathan
+version: "1.0.0"
+date-released: "2026-03-13"
+license: CC-BY-4.0
+repository-code: "https://github.com/nmadrid27/esf-community-toolkit"
+keywords:
+  - epistemic stewardship
+  - AI-assisted work
+  - intellectual ownership
+  - creative practice
+  - AI disclosure
+  - community toolkit
