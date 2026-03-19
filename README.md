@@ -43,9 +43,17 @@ Five practices, applied before, during, and after AI-assisted work:
 
 ## Quick Start
 
-### Option A: Use the templates directly
+Pick the path that fits you best. They all get you to the same place.
 
-Copy the `templates/` folder into your project. Use them as-is or adapt them to your workflow.
+### Download and use the templates (no install needed)
+
+The simplest way to start. No terminal, no coding, no special tools.
+
+1. Click the green **Code** button at the top of this page, then **Download ZIP**
+2. Unzip the folder and open `templates/`
+3. Copy `position-statement.md` into your project folder and fill it in before opening any AI tool
+
+That is all you need to get started. See the **[Getting Started guide](docs/getting-started.md)** for a full step-by-step walkthrough.
 
 ```
 templates/
@@ -56,9 +64,25 @@ templates/
 └── disclosure-statement.md    ← Add to finished deliverables
 ```
 
-### Option B: Use the installer (sets up git + templates)
+### Use with any AI tool (ChatGPT, Gemini, Claude, etc.)
 
-If you want a ready-made project structure:
+Open `prompts/esf-companion.md`, copy the contents, and paste it at the start of a new conversation with your AI tool. It works with ChatGPT, Gemini, Claude.ai, or any tool that accepts text input. The AI will follow the ESF process and ask for your Position Statement before helping with project work.
+
+### Use with Claude Cowork (no terminal needed)
+
+If you use the Claude desktop app, [Cowork](https://claude.com/product/cowork) can work directly with the ESF templates on your computer — no terminal required.
+
+1. Download and unzip the toolkit (see above)
+2. Open Claude Desktop and start a Cowork session
+3. Point Claude to your toolkit folder — it can read your local files directly, including the companion prompt and all templates
+
+That is it. Claude will read the ESF companion prompt on its own, check for your Position Statement, and guide you through the full workflow — exploring, building, logging AI contributions, and recording moments of resistance. No copying or pasting required.
+
+Available on Pro, Max, Team, and Enterprise plans.
+
+### Use the installer (for terminal users)
+
+If you are comfortable with the command line and want a ready-made project structure with git:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/nmadrid27/esf-community-toolkit/main/install.sh | bash
@@ -66,13 +90,9 @@ curl -fsSL https://raw.githubusercontent.com/nmadrid27/esf-community-toolkit/mai
 
 The script creates a directory, initializes git, drops in the templates, and gives you a clean starting point.
 
-### Option C: Use with Claude Code
+### Use with Claude Code
 
 The installer also sets up a `.claude/` configuration that teaches Claude Code the ESF process. When you start a session, Claude checks for a Position Statement before assisting with project work.
-
-### Option D: Use with any AI tool
-
-Paste the prompt from `prompts/esf-companion.md` at the start of your AI session. It works with ChatGPT, Gemini, Claude.ai, or any tool that accepts a system prompt. The same process applies; you just manage the files manually.
 
 ---
 
