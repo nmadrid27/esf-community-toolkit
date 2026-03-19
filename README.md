@@ -68,6 +68,19 @@ templates/
 
 Open `prompts/esf-companion.md`, copy the contents, and paste it at the start of a new conversation with your AI tool. It works with ChatGPT, Gemini, Claude.ai, or any tool that accepts text input. The AI will follow the ESF process and ask for your Position Statement before helping with project work.
 
+### Use with Claude Cowork (no terminal needed)
+
+If you use the Claude desktop app, [Cowork](https://claude.com/product/cowork) can work directly with the ESF templates on your computer — no terminal required.
+
+1. Download and unzip the toolkit (see above)
+2. Open Claude Desktop and start a Cowork session
+3. Point Claude to your toolkit folder. It can read and write your local files directly.
+4. Paste the companion prompt from `prompts/esf-companion.md` at the start of the conversation
+
+Claude will follow the ESF process: checking for your Position Statement, helping you explore and build, and prompting you to log AI contributions and record moments of resistance. Since Cowork handles multi-step tasks and works with local files, it can help you manage the full ESF workflow without you needing to switch between tools.
+
+Available on Pro, Max, Team, and Enterprise plans.
+
 ### Use the installer (for terminal users)
 
 If you are comfortable with the command line and want a ready-made project structure with git:

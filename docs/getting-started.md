@@ -56,7 +56,18 @@ This is the anchor for everything that follows. Once you have written it, you ar
 3. Paste it at the start of a new conversation with your AI tool (as a system prompt, custom instruction, or first message)
 4. The AI will now follow the ESF process — it will ask for your Position Statement before helping with project work
 
-### Option B: Claude Code (for developers)
+### Option B: Claude Cowork (no terminal needed)
+
+If you use the Claude desktop app, [Cowork](https://claude.com/product/cowork) can work directly with the ESF templates on your computer.
+
+1. Open Claude Desktop and start a Cowork session
+2. Point Claude to your toolkit folder — it can read and write your local files directly
+3. Paste the companion prompt from `prompts/esf-companion.md` at the start of the conversation
+4. Claude will follow the ESF process, including checking for your Position Statement, prompting you to log AI contributions, and reminding you to record moments of resistance
+
+Cowork handles multi-step tasks and manages local files, so you can run the full ESF workflow without switching between tools. Available on Pro, Max, Team, and Enterprise plans.
+
+### Option C: Claude Code (for developers)
 
 If you use Claude Code, the toolkit includes configuration files in the `.claude/` folder that work automatically. Just run `claude` in the toolkit directory and it will check for your Position Statement before assisting.
 
