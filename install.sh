@@ -101,28 +101,6 @@ if [ -d ".git" ] && ! git log --oneline -1 &>/dev/null 2>&1; then
   echo -e "${GREEN}  Initial commit created.${NC}"
 fi
 
-# Offer GitHub push
-if command -v gh &> /dev/null && [ -d ".git" ]; then
-  if ! git remote get-url origin &>/dev/null 2>&1; then
-    echo ""
-    if [ -t 0 ]; then
-      read -r -p "Push to GitHub as a private repo? (y/N): " PUSH_GH
-    else
-      PUSH_GH="N"
-    fi
-    if [[ "$PUSH_GH" =~ ^[Yy]$ ]]; then
-      REPO_NAME=$(basename "$(pwd)")
-      if gh auth status &>/dev/null; then
-        gh repo create "$REPO_NAME" --private --source=. --push -q 2>/dev/null && \
-          echo -e "${GREEN}  GitHub repo created and pushed.${NC}" || \
-          echo -e "${YELLOW}  Could not create GitHub repo. You can do this later.${NC}"
-      else
-        echo -e "${YELLOW}  Not logged in to GitHub CLI. Run 'gh auth login' first.${NC}"
-      fi
-    fi
-  fi
-fi
-
 echo ""
 echo -e "${GREEN}ESF Community Toolkit installed.${NC}"
 echo ""

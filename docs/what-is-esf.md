@@ -36,29 +36,13 @@ ESF calls this a Position Statement (for individual practitioners) or a Directiv
 
 ### The Five Questions
 
-At every significant decision point during AI-assisted work, ask:
-
-| Question | What it tests |
-|----------|---------------|
-| **Can I defend this?** | Could I explain every choice without referencing what the AI said? |
-| **Is this mine?** | Did I direct this, or did I accept the AI's framing because it sounded reasonable? |
-| **Did I verify?** | Have I independently checked facts, sources, and claims? |
-| **Would I teach this?** | Could I stand behind this in front of a colleague or collaborator? |
-| **Is my disclosure honest?** | Does my description of AI use match what actually happened? |
-
-If any answer is no, you have three options: revise the work, reduce the AI contribution, or disclose honestly. All three are acceptable. Ignoring the question is not.
+At every significant decision point, run the Five Questions: Can I defend this? Is this mine? Did I verify? Would I teach this? Is my disclosure honest? If any answer is no, stop and fix it. The full questions with context are in [WORKFLOW.md](../WORKFLOW.md).
 
 Question 2 catches most people. After an hour of working with AI on a draft, the line between "my position" and "a position I accepted because the AI said it well" blurs fast. That is not a weakness. It is how polished output works on your thinking.
 
 ### Scaling to the Stakes
 
-Not everything needs the full process. ESF uses a concept called Content Epistemic Weight to calibrate effort to stakes:
-
-| Weight | Examples | What's required |
-|--------|----------|-----------------|
-| **High** | Original arguments, scholarship, client deliverables, portfolio pieces | Full process: Position Statement, all checkpoints, detailed disclosure |
-| **Medium** | Project briefs, proposals, structured outlines | Abbreviated position, key checkpoints, disclosure |
-| **Low** | Emails, scheduling, formatting, routine tasks | Light review, attribution |
+Not everything needs the full process. ESF uses a concept called Content Epistemic Weight to calibrate effort to stakes: High-weight work (original arguments, portfolio pieces, client deliverables) requires the full process. Medium-weight work (briefs, proposals) needs an abbreviated position and key checkpoints. Low-weight work (emails, scheduling, formatting) needs light review and attribution. The full table is in [WORKFLOW.md](../WORKFLOW.md).
 
 The classification is based on how much human thinking the content demands, not how much AI a policy permits. A portfolio piece is high-weight because the creative and intellectual claims must originate with you. A meeting agenda is low-weight because it makes no intellectual claims.
 

@@ -27,15 +27,7 @@ At the beginning of each session:
 
 ## At Review Points
 
-Prompt the user to run the Five Questions:
-
-1. Can I defend this?
-2. Is this mine?
-3. Did I verify?
-4. Would I teach this?
-5. Is my disclosure honest?
-
-If any answer is no, help the user address it before continuing.
+Prompt the user to run the Five Questions (see `templates/five-questions-checklist.md`). If any answer is no, help the user address it before continuing.
 
 ## Session End
 
