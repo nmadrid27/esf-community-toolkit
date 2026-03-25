@@ -9,10 +9,12 @@
 #   --sample    Install pre-filled BUILD-level test data (Alex Rivera)
 #   --force     Skip all interactive prompts (for scripted installs)
 #   --course    Fetch course-specific config (e.g., --course ai-180)
+#   --platform  Set platform without prompting (claude or conversation)
 #
 # Examples:
 #   curl -fsSL ... | bash -s -- --course ai-180
-#   curl -fsSL ... | bash -s -- --force --course ai-201
+#   curl -fsSL ... | bash -s -- --force --platform claude
+#   curl -fsSL ... | bash -s -- --force --platform conversation
 #   curl -fsSL ... | bash -s -- --sample
 
 set -e
@@ -21,10 +23,15 @@ SAMPLE=false
 FORCE=false
 COURSE=""
 COURSE_NEXT=false
+PLATFORM_FLAG=""
+PLATFORM_NEXT=false
 for arg in "$@"; do
   if [ "$COURSE_NEXT" = true ]; then
     COURSE="$arg"
     COURSE_NEXT=false
+  elif [ "$PLATFORM_NEXT" = true ]; then
+    PLATFORM_FLAG="$arg"
+    PLATFORM_NEXT=false
   elif [ "$arg" = "--sample" ]; then
     SAMPLE=true
   elif [ "$arg" = "--force" ]; then
@@ -33,6 +40,10 @@ for arg in "$@"; do
     COURSE="${arg#--course=}"
   elif [ "$arg" = "--course" ]; then
     COURSE_NEXT=true
+  elif [[ "$arg" == --platform=* ]]; then
+    PLATFORM_FLAG="${arg#--platform=}"
+  elif [ "$arg" = "--platform" ]; then
+    PLATFORM_NEXT=true
   fi
 done
 
@@ -95,9 +106,12 @@ if [ ! -d ".git" ]; then
   fi
 fi
 
-# Ask which AI tool the user will use
+# Determine platform
 PLATFORM="claude"
-if [ "$FORCE" != true ]; then
+if [ -n "$PLATFORM_FLAG" ]; then
+  PLATFORM="$PLATFORM_FLAG"
+  echo "Platform: $PLATFORM (set via --platform flag)"
+elif [ "$FORCE" != true ]; then
   echo ""
   echo "What AI tool will you use with ESF Companion?"
   echo ""
@@ -131,15 +145,21 @@ if [ "$PLATFORM" = "conversation" ]; then
   mkdir -p prompts
   mkdir -p templates
 
-  echo "  Fetching companion prompt..."
+  echo "  Fetching companion prompts..."
   curl -fsSL "$TOOLKIT_BASE/prompts/companion.md"        -o prompts/companion.md
+  curl -fsSL "$TOOLKIT_BASE/prompts/esf-companion.md"    -o prompts/esf-companion.md
   curl -fsSL "$TOOLKIT_BASE/prompts/project-workflow.md"  -o prompts/project-workflow.md
   curl -fsSL "$TOOLKIT_BASE/prompts/README.md"            -o prompts/README.md
 
   echo "  Fetching templates..."
   curl -fsSL "$TOOLKIT_BASE/templates/position-statement-template.md"    -o templates/position-statement-template.md
+  curl -fsSL "$TOOLKIT_BASE/templates/position-statement.md"             -o templates/position-statement.md
   curl -fsSL "$TOOLKIT_BASE/templates/record-of-resistance-template.md"  -o templates/record-of-resistance-template.md
+  curl -fsSL "$TOOLKIT_BASE/templates/record-of-resistance.md"           -o templates/record-of-resistance.md
   curl -fsSL "$TOOLKIT_BASE/templates/ai-use-log-template.md"           -o templates/ai-use-log-template.md
+  curl -fsSL "$TOOLKIT_BASE/templates/ai-use-log.md"                    -o templates/ai-use-log.md
+  curl -fsSL "$TOOLKIT_BASE/templates/five-questions-checklist.md"      -o templates/five-questions-checklist.md
+  curl -fsSL "$TOOLKIT_BASE/templates/disclosure-statement.md"          -o templates/disclosure-statement.md
 
   if [ ! -f "WORKFLOW.md" ]; then
     curl -fsSL "$TOOLKIT_BASE/WORKFLOW.md" -o WORKFLOW.md
@@ -199,18 +219,25 @@ curl -fsSL "$TOOLKIT_BASE/.claude/skills/esf-update/SKILL.md"     -o .claude/ski
 # Download version file
 curl -fsSL "$TOOLKIT_BASE/.claude/esf-version" -o .claude/esf-version
 
-# Download prompts (for non-Claude Code users)
+# Download prompts
 echo "  Fetching prompts..."
-curl -fsSL "$TOOLKIT_BASE/prompts/companion.md"  -o prompts/companion.md
-curl -fsSL "$TOOLKIT_BASE/prompts/project-workflow.md"   -o prompts/project-workflow.md
-curl -fsSL "$TOOLKIT_BASE/prompts/README.md"             -o prompts/README.md
+curl -fsSL "$TOOLKIT_BASE/prompts/companion.md"        -o prompts/companion.md
+curl -fsSL "$TOOLKIT_BASE/prompts/esf-companion.md"    -o prompts/esf-companion.md
+curl -fsSL "$TOOLKIT_BASE/prompts/project-workflow.md"  -o prompts/project-workflow.md
+curl -fsSL "$TOOLKIT_BASE/prompts/README.md"            -o prompts/README.md
 
 # Download templates
 echo "  Fetching templates..."
 curl -fsSL "$TOOLKIT_BASE/templates/position-statement-template.md"    -o templates/position-statement-template.md
+curl -fsSL "$TOOLKIT_BASE/templates/position-statement.md"             -o templates/position-statement.md
 curl -fsSL "$TOOLKIT_BASE/templates/ai-use-log-template.md"           -o templates/ai-use-log-template.md
 curl -fsSL "$TOOLKIT_BASE/templates/ai-use-log-lite-template.md"     -o templates/ai-use-log-lite-template.md
+curl -fsSL "$TOOLKIT_BASE/templates/ai-use-log.md"                    -o templates/ai-use-log.md
 curl -fsSL "$TOOLKIT_BASE/templates/record-of-resistance-template.md" -o templates/record-of-resistance-template.md
+curl -fsSL "$TOOLKIT_BASE/templates/record-of-resistance.md"          -o templates/record-of-resistance.md
+curl -fsSL "$TOOLKIT_BASE/templates/five-questions-checklist.md"      -o templates/five-questions-checklist.md
+curl -fsSL "$TOOLKIT_BASE/templates/disclosure-statement.md"          -o templates/disclosure-statement.md
+curl -fsSL "$TOOLKIT_BASE/templates/evolution-log-template.md"        -o templates/evolution-log-template.md
 curl -fsSL "$TOOLKIT_BASE/templates/session-log-template.md"          -o templates/session-log-template.md
 curl -fsSL "$TOOLKIT_BASE/templates/reflection-template.md"   -o templates/reflection-template.md
 curl -fsSL "$TOOLKIT_BASE/templates/evolution-log-template.md"        -o templates/evolution-log-template.md

@@ -143,8 +143,10 @@ if command -v gh &> /dev/null; then
   if [[ "$CREATE_REMOTE" =~ ^[Yy]$ ]]; then
     # Check if logged in
     if gh auth status &> /dev/null; then
-      gh repo create "$REPO_NAME" --private --source=. --push -q 2>/dev/null && \
-        echo -e "${GREEN}  GitHub repo created and pushed.${NC}" || \
+      # Create the remote but don't push yet; install.sh will add toolkit files and auto-commit
+      gh repo create "$REPO_NAME" --private --source=. -q 2>/dev/null && \
+        PUSH_AFTER_INSTALL=true && \
+        echo -e "${GREEN}  GitHub repo created. Will push after install completes.${NC}" || \
         echo -e "${YELLOW}  Could not create GitHub repo. You can do this later with: gh repo create${NC}"
     else
       echo -e "${YELLOW}  Not logged in to GitHub CLI. Run 'gh auth login' first.${NC}"
@@ -170,6 +172,13 @@ echo ""
 
 INSTALLER_URL="https://raw.githubusercontent.com/nmadrid27/esf-companion/main/install.sh"
 curl -fsSL "$INSTALLER_URL" | bash
+
+# Push to GitHub if remote was created earlier
+if [ "$PUSH_AFTER_INSTALL" = true ]; then
+  git push -u origin main --quiet 2>/dev/null && \
+    echo -e "  ${GREEN}Pushed to GitHub (includes toolkit files).${NC}" || \
+    echo -e "  ${YELLOW}Could not push. Run 'git push -u origin main' later.${NC}"
+fi
 
 echo ""
 echo -e "${GREEN}All done.${NC} Your project repo is ready at: $(pwd)"
