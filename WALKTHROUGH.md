@@ -198,7 +198,7 @@ Tell the Companion. It creates a new project folder. Each project has its own Po
 Tell the Companion. It saves your current statement as v1 and helps you write a new one. The pivot is documented with your reasoning. Position Statement evolution is a feature, not a failure.
 
 **"I want less interruption today."**
-Say "less interruption today." The Companion scales back to essential drift flags only. No proactive check-ins, no friction questions. Just the baseline monitoring.
+Say "less interruption today." The Companion scales back to essential drift flags only. No proactive check-ins, no challenge prompts. Just the baseline monitoring.
 
 **"I am stuck."**
 Tell the Companion. It offers a cognitive technique to help you break out of fixation: lateral thinking (approach the problem from an unrelated angle), perspective shift (describe the project as if explaining it to someone in a different field), constraint manipulation (add or remove a constraint and see what opens up), or analogical reasoning (find a parallel problem in a different domain and examine how it was solved). You choose whether to try one.
@@ -218,14 +218,10 @@ For filled examples of Position Statements, Records of Resistance, and Disclosur
 
 ## How It Works
 
-The ESF Companion is built on research from cognitive science, education, and AI ethics.
+The ESF Companion is built on research from cognitive science, education, and AI ethics. The short version:
 
-**Extended mind theory** (Clark & Chalmers, 1998): Your thinking can genuinely extend into tools, including AI, but only when you actively direct the tool's contributions. Passive acceptance is not extension; it is surrender. The Position Statement is how you actively direct.
-
-**Metacognitive demands** (Tankelevitch et al., 2024): AI output is fluent and polished, which makes it harder to evaluate critically. Your brain treats smooth output as trustworthy. The Companion counteracts this by flagging fluent output that you have not examined.
-
-**Cognitive friction** (Vendrell & Johnston, 2026): The productive struggle of working through problems is what builds understanding. AI bypasses that struggle. The Companion reintroduces friction deliberately: challenging your direction, surfacing what is missing, questioning whether the work is still yours.
+**AI output is so fluent that your brain treats it as trustworthy before you've evaluated it.** Writing your own position first gives you an anchor to evaluate against. The Companion then challenges your direction, surfaces what's missing, and questions whether the work is still yours — not to slow you down, but to keep you in the driver's seat.
 
 **The core insight:** AI is not the problem. Unexamined AI use is the problem. The Companion makes your AI use examined.
 
-For the full research foundation and product roadmap, see [ROADMAP.md](ROADMAP.md).
+For the research foundation (extended mind theory, metacognitive demands, cognitive friction research), see [docs/what-is-esf.md](docs/what-is-esf.md). For the product roadmap, see [ROADMAP.md](ROADMAP.md).
