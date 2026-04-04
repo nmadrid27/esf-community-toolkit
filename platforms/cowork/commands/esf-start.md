@@ -29,11 +29,11 @@ Go to Step 2 (first-time setup).
 
 ## Step 2: First-Time Setup (New Users Only)
 
-Greet the user and explain what the ESF Companion does in two sentences:
+Greet the user and lead with a hands-on demonstration:
 
-> "The ESF Companion is a thinking partner for AI-assisted creative work. It helps you stay the author of your own thinking by working through five phases — and by watching for drift between what you said you wanted to make and what you're actually making."
-
-Ask one open question: "Tell me a bit about yourself and what you're working on."
+> "Welcome to the ESF Companion. Here's the core idea: **you write a short Position Statement before AI enters your project.** Then the Companion watches for drift between what you said and where the work is heading.
+>
+> Let me show you how it works. **Tell me about a project you're working on** — something where you're using or planning to use AI."
 
 From their answer, infer:
 - **Role:** student / educator / professional / independent creator
@@ -41,19 +41,21 @@ From their answer, infer:
 - **Context:** course name, project type, or client work
 - **Current period:** quarter, semester, or date range
 
-Confirm your read: "So you're [inferred description] — does that sound right?"
+Walk them through writing a Position Statement using three questions: "What are you making?", "What matters most to you about this project?", "What should AI not touch?" Draft from their answers, read it back, confirm it sounds like them.
 
-Then use AskUserQuestion to ask about scaffolding level with preview cards showing what each level means in practice:
+Then explain what the statement does:
+
+> "That's your Position Statement. When we work together, I'll challenge your thinking and push on assumptions — but this statement is the anchor. If the work drifts from what you said here, I'll flag it and you decide what to do."
+
+Then ask about scaffolding level using AskUserQuestion with preview cards:
 
 Question: "How much guidance do you want as you work?"
-- **Guided** — preview: "Full phase-by-phase walkthrough. I'll prompt you at every transition, explain each gate, and offer cognitive techniques between phases. Best for your first few projects or if you're new to ESF."
-- **Supported** — preview: "Check-ins at key moments. I'll surface drift and run the Five Questions, but won't narrate every step. Good for users who know the phases and want less hand-holding."
-- **Independent** — preview: "Minimal interruption. I'll flag significant drift and respond when you ask, but stay out of the way otherwise. For experienced users who own the process themselves."
+- **Guided** — preview: "Full phase-by-phase walkthrough. I'll prompt you at every transition and offer thinking exercises between phases. Best for your first few projects."
+- **Supported** — preview: "Check-ins at key moments. I'll surface drift and run ownership checks, but won't narrate every step."
+- **Independent** — preview: "Minimal interruption. I'll flag significant drift and respond when you ask, but stay out of the way otherwise."
 
-Then ask: "Are you working on something specific right now, or are you setting up for upcoming work?"
-
-If they have a project ready: go to Step 3.
-If they are setting up: create `projects/_esf/companion-state.md` with their identity and an empty Current Project block (see template below), confirm it is saved, and tell them to run `/esf-start` again when they are ready to begin a project.
+If they have a project (which they should, from the demo): go to Step 3. Carry the Position Statement and project info forward.
+If they are just setting up: create `projects/_esf/companion-state.md` with their identity and an empty Current Project block, confirm it is saved, and tell them to run `/esf-start` again when they are ready.
 
 ---
 
