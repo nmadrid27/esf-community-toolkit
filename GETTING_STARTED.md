@@ -278,7 +278,9 @@ If Jordan tries a follow-up question ("Can you at least help me understand the b
 >
 > Close this tool and write it offline. It doesn't need to be polished. It just needs to be yours.
 
-The gate holds. Jordan closes Claude Code, writes the Position Statement, and returns.
+If Jordan doesn't want to write offline, there's a second option: "Talk it through." The Companion asks three questions — What are you making? What matters most? What will you not compromise? — and drafts from Jordan's answers. The ideas are still Jordan's. The structure is the Companion's contribution.
+
+The gate holds either way. Jordan writes the Position Statement (offline or via conversation) and returns.
 
 ---
 

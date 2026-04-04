@@ -133,7 +133,7 @@ Write your Position Statement. Three elements:
 
 Save it to `projects/[context]/position-statements/[project-name].md`. It does not need to be polished. Rough is fine.
 
-If you prefer to talk through your ideas rather than write, the Companion can help you articulate your position through conversation when you open Phase 3. You answer questions in your own words; the Companion structures them.
+If you'd rather talk it through than write, tell the Companion when you open Phase 3. It will ask you three questions, draft from your answers, and read it back for you to confirm. Your ideas, its structure.
 
 ### Phase 3: Explore (with AI)
 
