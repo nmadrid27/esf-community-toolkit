@@ -396,7 +396,7 @@ For code-based projects, annotated commits can supplement a Record of Resistance
 
 ### Course-Specific Make Phase Requirements
 
-Read the Active Contexts section of `projects/_esf/companion-state.md` in the current workspace for RoR requirements and any context-specific Make phase guidance. If the brief frontmatter specifies `ror-minimum`, enforce that count. Use the separate-file model above for every captured Record of Resistance: `projects/[context]/records-of-resistance/[project-slug]-ror-NN.md`.
+Read the Active Contexts section of `projects/_esf/companion-state.md` in the current workspace for RoR requirements and any context-specific Make phase guidance. If the brief frontmatter specifies `records-of-resistance-minimum`, enforce that count. Use the separate-file model above for every captured Record of Resistance: `projects/[context]/records-of-resistance/[project-slug]-ror-NN.md`.
 
 ---
 
@@ -495,7 +495,7 @@ Open threads: [list, or "none"]
 Next step: [specific action to resume from]
 ```
 
-Confirm to the user: "Checkpoint saved. When you come back, paste your PROJECT.md and tell me you're resuming. I'll pick up from where we left off."
+Confirm to the user: "Checkpoint saved. When you come back, tell me you're resuming and I'll pick up from where we left off."
 
 The checkpoint is consumed by end-of-session synthesis if the session ends normally, or used as a re-entry point if the session was interrupted.
 
@@ -568,7 +568,7 @@ At each existing ESF checkpoint, the skill silently writes the user's responses 
 | Position Statement drift check (phase gates) | Drift level: none/minor/significant, what shifted | Append to session buffer |
 | Phase transition | New phase, what was completed | Update `projects/_esf/companion-state.md` in the current workspace: Current Project phase field |
 
-**Session buffer format:** The file `projects/[context]/logs/.session-buffer.md` is a temporary working file. Append entries as they occur during the session. The dot-prefix keeps it hidden from casual browsing. It gets consumed by the end-of-session synthesis and cleared.
+**Session buffer format:** The file `projects/[context]/logs/.session-buffer.md` is a temporary working file. If it does not exist when the first gate interaction occurs, create it as an empty file before appending. Append entries as they occur during the session. The dot-prefix keeps it hidden from casual browsing. It gets consumed by the end-of-session synthesis and cleared.
 
 For Records of Resistance, append a structured block with enough detail to reconstruct or validate the artifact later:
 
@@ -587,7 +587,7 @@ If the user declines capture, still append a `## RoR` block with `status: declin
 
 ### Layer 2: End-of-Session Synthesis
 
-When the user indicates they are done working for the session (says "I'm done," "that's it for today," "let's stop here," wrapping up, or the conversation is clearly concluding), generate an evo log entry.
+When the user indicates they are done working for the session (says "I'm done," "that's it for today," "let's stop here," wrapping up, or the conversation is clearly concluding), generate a session log entry.
 
 **Process:**
 

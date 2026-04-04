@@ -282,6 +282,11 @@ if [ "$PLATFORM" != "claude" ]; then
   fetch_if_missing "$TOOLKIT_BASE/templates/companion-state-template.md" templates/companion-state-template.md
   fetch_if_missing "$TOOLKIT_BASE/templates/five-questions-checklist.md" templates/five-questions-checklist.md
   fetch_if_missing "$TOOLKIT_BASE/templates/disclosure-statement.md" templates/disclosure-statement.md
+  fetch_if_missing "$TOOLKIT_BASE/templates/session-log-template.md" templates/session-log-template.md
+  fetch_if_missing "$TOOLKIT_BASE/templates/reflection-template.md" templates/reflection-template.md
+  fetch_if_missing "$TOOLKIT_BASE/templates/project-plan.md" templates/project-plan.md
+  fetch_if_missing "$TOOLKIT_BASE/templates/project-scope-template.md" templates/project-scope-template.md
+  fetch_if_missing "$TOOLKIT_BASE/templates/evolution-log-template.md" templates/evolution-log-template.md
 
   if [ ! -f "WORKFLOW.md" ]; then
     curl -fsSL "$TOOLKIT_BASE/WORKFLOW.md" -o WORKFLOW.md

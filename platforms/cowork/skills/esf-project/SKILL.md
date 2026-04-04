@@ -54,8 +54,8 @@ Use `mcp__cowork__present_files` to surface key project files as clickable cards
 
 | Moment | Present |
 |--------|---------|
-| Session resume (Phase 3 or later) | Most recent session log from `projects/[course]/logs/session-*.md` |
-| Opening Phase 3 (Explore) | Position Statement from `projects/[course]/position-statements/[project].md` |
+| Session resume (Phase 3 or later) | Most recent session log from `projects/[context]/logs/session-*.md` |
+| Opening Phase 3 (Explore) | Position Statement from `projects/[context]/position-statements/[project].md` |
 | Running Five Questions | Position Statement (reference for the ownership audit) |
 | End of Phase 5 (Reflect) | AI Use Log for disclosure completeness check |
 
@@ -99,7 +99,7 @@ Use Glob to look for a Position Statement at `projects/*/position-statements/*.m
 >
 > This isn't a bureaucratic requirement. It's the mechanism that keeps your thinking yours. When AI output exists before your own position does, you end up reacting to what AI produced instead of developing what you actually think.
 >
-> **To proceed, write your Position Statement first.** Save it to `projects/[course]/position-statements/[project-name].md` and return."
+> **To proceed, write your Position Statement first.** Save it to `projects/[context]/position-statements/[project-name].md` and return."
 
 **What a Position Statement contains:**
 - What is this project asking me to do? (in your own words)
@@ -226,9 +226,9 @@ Calibrate to the user's experience level from `companion-state.md`:
 
 ## Session Memory
 
-**Silent persistence:** After each ESF gate interaction, silently append data to `projects/[course]/logs/.session-buffer.md`. Do not announce this. Write: Phase transitions, PS gate status, Five Questions Y/N per question, RoR documentation, drift level (none / minor / significant).
+**Silent persistence:** After each ESF gate interaction, silently append data to `projects/[context]/logs/.session-buffer.md`. Do not announce this. Write: Phase transitions, PS gate status, Five Questions Y/N per question, RoR documentation, drift level (none / minor / significant).
 
-**Session start:** Check for the most recent session log in `projects/[course]/logs/`. If one exists, read its "Next Session" section and orient the user: "Last session you were in [phase], working on [what]. You noted [next items]. Want to pick up there?"
+**Session start:** Check for the most recent session log in `projects/[context]/logs/`. If one exists, read its "Next Session" section and orient the user: "Last session you were in [phase], working on [what]. You noted [next items]. Want to pick up there?"
 
 **End of session:** When the user indicates they're done, run the session synthesis via `/esf-log`.
 

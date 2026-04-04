@@ -22,6 +22,7 @@ Using the project name and context from `companion-state.md`, check for the foll
 | Records of Resistance | `projects/*/records-of-resistance/*.md` — count entries |
 | AI Use Log | `projects/*/ai-use-logs/*.md` |
 | Session logs | `projects/*/logs/session-*.md` — count and find most recent |
+| Gate records | `projects/*/gate-records/*.md` — count entries |
 | Active session buffer | `projects/*/logs/.session-buffer.md` |
 
 Read the brief frontmatter to find: RoR minimum required, position-statement setting (required / optional / not-required), five-questions setting.
@@ -40,6 +41,7 @@ Last session: [date] — [brief note if available]
 Position Statement: [exists at path / NOT YET WRITTEN]
 Records of Resistance: [N] documented[, minimum [M] required] / [not required]
 AI Use Log: [exists / not started]
+Gate records: [N] saved
 Session logs: [N] saved / most recent [date]
 
 **What's next:** [one sentence orienting the user to their immediate next action based on current phase and missing artifacts]
