@@ -1,7 +1,7 @@
 ---
 title: "Reflection"
 type: esf-template
-assignment: ""
+project: ""
 context: ""
 date: ""
 scaffolding-level: ""
@@ -10,8 +10,8 @@ status: ""
 
 # Reflection
 
-**Assignment:** [Assignment name]
-**Course:** [Course name and number]
+**Project:** [Project name]
+**Context:** [Context label]
 **Date:** [Date of submission]
 **Scaffolding Level:** [Guided / Supported / Independent]
 
