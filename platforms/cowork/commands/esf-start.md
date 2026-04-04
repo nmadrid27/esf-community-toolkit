@@ -71,7 +71,7 @@ Ask:
 3. "What's your deadline or key milestone?"
 4. "Where is the line for AI on this project — what tasks do you want to keep human-only?"
 
-Generate a minimal brief in markdown, present it, and ask: "Does this capture it? I'll save it to `projects/[name]/briefs/[project-name]-brief.md`."
+Generate a minimal brief in markdown, present it, and ask: "Does this capture it? I'll save it to `projects/[context]/briefs/[project-name]-brief.md`."
 
 ---
 
@@ -122,8 +122,8 @@ last-updated: [today's date]
 
 - **Context:** [course or project context]
 - **Project name:** [project name]
-- **Brief location:** `projects/[name]/briefs/[brief-file].md`
-- **Position Statement:** `projects/[name]/position-statements/[project-name].md`
+- **Brief location:** `projects/[context]/briefs/[brief-file].md`
+- **Position Statement:** `projects/[context]/position-statements/[project-name].md`
 - **Phase:** Inquire
 - **Last session:** [today's date] — Project initialized.
 - **Scaffolding level:** [Guided / Supported / Independent]

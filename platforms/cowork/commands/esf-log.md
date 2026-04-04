@@ -82,7 +82,7 @@ Once the user confirms (or makes edits and confirms), save the log to:
 
 ## Step 4: Update PROJECT.md
 
-Write or update `projects/[project-name]/PROJECT.md`:
+Write or update `projects/[context]/PROJECT.md`:
 
 ```markdown
 # Project: [name]
