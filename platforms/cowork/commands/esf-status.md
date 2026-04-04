@@ -7,7 +7,7 @@ Display a one-screen status snapshot of the current ESF project. Follow this seq
 
 ## Step 1: Read companion-state.md
 
-Search for `companion-state.md` using a two-pass shallow glob: first `companion-state.md` at root, then `*/companion-state.md` one level deep. Ignore matches whose path contains `sample/`, `examples/`, or `templates/`. If not found, tell the user: "No ESF workspace found in this folder. Run `/esf-start` to set one up." Stop.
+Search for `projects/_esf/companion-state.md` first. If not found, check `companion-state.md` at root and `*/companion-state.md` one level deep for backwards compatibility. Ignore matches whose path contains `sample/`, `examples/`, or `templates/`. If not found, tell the user: "No ESF workspace found in this folder. Run `/esf-start` to set one up." Stop.
 
 If found, read it and extract: project name, current phase, last session date.
 

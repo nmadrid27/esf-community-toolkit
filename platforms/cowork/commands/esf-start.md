@@ -9,13 +9,7 @@ Initialize or resume an ESF Companion session. Follow this sequence exactly.
 
 ## Step 1: Check for companion-state.md
 
-Search for `companion-state.md` in two passes — shallow first to avoid matching sample or template files nested inside repos:
-
-1. Glob `companion-state.md` — root of selected folder only.
-2. If not found, Glob `*/companion-state.md` — one level deep (direct subfolders).
-3. If still not found: go to Step 2 (first-time setup).
-
-If multiple matches are found, prefer the one closest to the root. Ignore any match whose path contains `sample/`, `examples/`, or `templates/`.
+Search for `projects/_esf/companion-state.md` in the selected folder. If not found, also check `companion-state.md` at root and `*/companion-state.md` one level deep for backwards compatibility. Ignore any match whose path contains `sample/`, `examples/`, or `templates/`.
 
 **If companion-state.md exists:**
 Read it. Extract: user name/role, active contexts (courses or projects), current project name, current phase, and last session date. Then use AskUserQuestion with preview cards:
@@ -59,7 +53,7 @@ Question: "How much guidance do you want as you work?"
 Then ask: "Are you working on something specific right now, or are you setting up for upcoming work?"
 
 If they have a project ready: go to Step 3.
-If they are setting up: create `companion-state.md` with their identity and an empty Current Project block (see template below), confirm it is saved, and tell them to run `/esf-start` again when they are ready to begin a project.
+If they are setting up: create `projects/_esf/companion-state.md` with their identity and an empty Current Project block (see template below), confirm it is saved, and tell them to run `/esf-start` again when they are ready to begin a project.
 
 ---
 
@@ -86,21 +80,23 @@ Generate a minimal brief in markdown, present it, and ask: "Does this capture it
 Create the following folders if they do not exist:
 
 ```
-projects/[project-name]/
-├── briefs/
-├── position-statements/
-├── records-of-resistance/
-├── ai-use-logs/
-├── gate-records/
-├── reflections/
-└── logs/
+projects/
+├── _esf/
+├── [project-name]/
+│   ├── briefs/
+│   ├── position-statements/
+│   ├── records-of-resistance/
+│   ├── ai-use-logs/
+│   ├── gate-records/
+│   ├── reflections/
+│   └── logs/
 ```
 
 ---
 
 ## Step 5: Update companion-state.md
 
-Write or update `companion-state.md` with the current project and set Phase to "Inquire":
+Write or update `projects/_esf/companion-state.md` with the current project and set Phase to "Inquire". Use `templates/companion-state-template.md` as the starting structure:
 
 ```markdown
 ---
@@ -108,14 +104,15 @@ type: companion-state
 last-updated: [today's date]
 ---
 
+# ESF Companion State
+
 ## Identity
 
 - **Name:** [name]
-- **Role:** [student / educator / professional / independent creator]
-- **Discipline:** [field]
-- **Period:** [current quarter or date range]
-- **Scaffolding level:** [Guided / Supported / Independent]
-- **Silent mode:** false
+- **Preferred name:** [preferred name]
+- **Role or program:** [student / educator / professional / independent creator]
+- **Discipline or focus:** [field]
+- **Current period:** [current quarter or date range]
 
 ## Active Contexts
 
@@ -123,12 +120,21 @@ last-updated: [today's date]
 
 ## Current Project
 
-- **Name:** [project name]
 - **Context:** [course or project context]
-- **Brief:** `projects/[name]/briefs/[brief-file].md`
+- **Project name:** [project name]
+- **Brief location:** `projects/[name]/briefs/[brief-file].md`
 - **Position Statement:** `projects/[name]/position-statements/[project-name].md`
 - **Phase:** Inquire
 - **Last session:** [today's date] — Project initialized.
+- **Scaffolding level:** [Guided / Supported / Independent]
+
+## Preferences
+
+- **silent_mode:** false
+
+## Growth Record
+
+None yet.
 ```
 
 ---
