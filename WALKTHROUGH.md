@@ -131,7 +131,7 @@ Write your Position Statement. Three elements:
 - **What matters most:** What qualities are non-negotiable?
 - **What you will not compromise:** The line AI will not cross.
 
-Save it to `projects/[name]/position-statements/`. It does not need to be polished. Rough is fine.
+Save it to `projects/[context]/position-statements/[project-name].md`. It does not need to be polished. Rough is fine.
 
 If you prefer to talk through your ideas rather than write, the Companion can help you articulate your position through conversation when you open Phase 3. You answer questions in your own words; the Companion structures them.
 
