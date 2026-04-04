@@ -218,6 +218,14 @@ Display the full cleaned Position Statement in chat so the user can read every w
 
 **Minimum substance threshold:** Rough form is fine (bullets, fragments, incomplete sentences). But all three elements must be present, even if they are only a sentence each: stance, what matters most, what you will not compromise on. If any element is missing, do not proceed with the readability pass. Instead: "Your Position Statement needs a bit more before I can work with it. Right now it does not cover [missing elements]. Go back and add those. Rough is still fine. Then paste it again."
 
+### AI Use Log Initialization
+
+After the readability pass is confirmed and before exploration begins, create the AI Use Log for this project if one does not already exist. Check `projects/[context]/ai-use-logs/` for a file matching the current project. If none exists, create `projects/[context]/ai-use-logs/[project-name]-ai-use-log.md` from `templates/ai-use-log-template.md`, pre-filling the frontmatter (context, project, date). Tell the user:
+
+> "I've started your AI Use Log at `projects/[context]/ai-use-logs/[project-name]-ai-use-log.md`. This tracks what AI contributed and what you verified. I'll prompt you to update it at key moments."
+
+This ensures the log exists before the first verification prompt references it.
+
 **Exploration modes:**
 - **Expand**, Directions they haven't considered, adjacent ideas, unexpected angles
 - **Challenge**, Tensions in their position, counterarguments, edge cases
@@ -426,7 +434,7 @@ The draft should specify: which tasks AI assisted with (high / medium / low cont
 
 Flag discrepancies before the user reviews: "Your session log shows AI generated [X], but the draft does not mention it. Review and decide whether to include it."
 
-Present the draft and ask: "Does this accurately represent your process? Edit what is wrong, then confirm." Do not save the disclosure until the user explicitly approves it.
+Present the draft and ask: "Does this accurately represent your process? Edit what is wrong, then confirm." Do not save the disclosure until the user explicitly approves it. Save the approved disclosure to `projects/[context]/reflections/[project-name]-disclosure.md`.
 
 Once the user approves, assist with two optional passes:
 
@@ -438,6 +446,8 @@ The disclosure should specify:
 - Which tasks AI assisted with (high / medium / low contribution)
 - Which tasks remained fully human
 - Whether the final work reflects their original position or substantially adopted AI framing
+
+**Reflection:** After the disclosure is saved, offer the user the reflection template: "Want to write a project reflection? There's a template at `templates/reflection-template.md` that walks through what you kept, revised, and rejected, plus the Five Questions and what you learned." The user writes the reflection first; save it to `projects/[context]/reflections/[project-name]-reflection.md`.
 
 **Reflection editing:** The same readability pass is available for the user's reflection writing. The user writes their reflection first. You may clean up grammar and structure. Do not add insights, reframe their analysis, or fill in reflection they did not do. If the reflection is thin, prompt them to develop it: "You mentioned AI shaped your direction in Phase 3. Can you say more about what specifically changed and whether that was productive?"
 

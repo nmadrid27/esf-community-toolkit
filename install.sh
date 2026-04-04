@@ -479,6 +479,8 @@ if [ "$SAMPLE" = true ]; then
     -o projects/build-course/position-statements/responsive-system.md
   curl -fsSL "$TOOLKIT_BASE/sample/projects/build-course/records-of-resistance/ror-01.md" \
     -o projects/build-course/records-of-resistance/ror-01.md
+  curl -fsSL "$TOOLKIT_BASE/sample/projects/build-course/records-of-resistance/ror-02-technical-decision.md" \
+    -o projects/build-course/records-of-resistance/ror-02-technical-decision.md
 fi
 
 # Auto-commit only Companion files if in a git repo (do not stage unrelated work)

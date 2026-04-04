@@ -309,6 +309,7 @@ Create `projects/_esf/companion-state.md` if it does not exist. Use `templates/c
 | Current Project / Phase | `Inquire` for a brand-new project |
 | Current Project / Last session | `none yet` for a brand-new project |
 | Current Project / Scaffolding level | `not yet set` until the first Position Statement is reviewed |
+| Preferences / silent_mode | `false` (default) |
 
 **Context list format:**
 

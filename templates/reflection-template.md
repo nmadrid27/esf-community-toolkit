@@ -4,7 +4,7 @@ type: esf-template
 assignment: ""
 context: ""
 date: ""
-engagement-level: ""
+scaffolding-level: ""
 status: ""
 ---
 
@@ -13,7 +13,7 @@ status: ""
 **Assignment:** [Assignment name]
 **Course:** [Course name and number]
 **Date:** [Date of submission]
-**Engagement Level:** [Discovery / Guided Use / Independent Use / Critical Partnership]
+**Scaffolding Level:** [Guided / Supported / Independent]
 
 ---
 
