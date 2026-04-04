@@ -439,6 +439,7 @@ fetch_if_missing "$TOOLKIT_BASE/templates/session-log-template.md" templates/ses
 fetch_if_missing "$TOOLKIT_BASE/templates/reflection-template.md" templates/reflection-template.md
 fetch_if_missing "$TOOLKIT_BASE/templates/project-brief-template.md" templates/project-brief-template.md
 fetch_if_missing "$TOOLKIT_BASE/templates/project-plan.md" templates/project-plan.md
+fetch_if_missing "$TOOLKIT_BASE/templates/project-scope-template.md" templates/project-scope-template.md
 
 # Download reference files
 echo "  Fetching reference files..."
@@ -477,10 +478,10 @@ if [ "$SAMPLE" = true ]; then
     -o projects/build-course/briefs/p2-responsive-system.md
   curl -fsSL "$TOOLKIT_BASE/sample/projects/build-course/position-statements/responsive-system.md" \
     -o projects/build-course/position-statements/responsive-system.md
-  curl -fsSL "$TOOLKIT_BASE/sample/projects/build-course/records-of-resistance/ror-01.md" \
-    -o projects/build-course/records-of-resistance/ror-01.md
-  curl -fsSL "$TOOLKIT_BASE/sample/projects/build-course/records-of-resistance/ror-02-technical-decision.md" \
-    -o projects/build-course/records-of-resistance/ror-02-technical-decision.md
+  curl -fsSL "$TOOLKIT_BASE/sample/projects/build-course/records-of-resistance/responsive-system-ror-01.md" \
+    -o projects/build-course/records-of-resistance/responsive-system-ror-01.md
+  curl -fsSL "$TOOLKIT_BASE/sample/projects/build-course/records-of-resistance/responsive-system-ror-02.md" \
+    -o projects/build-course/records-of-resistance/responsive-system-ror-02.md
 fi
 
 # Auto-commit only Companion files if in a git repo (do not stage unrelated work)

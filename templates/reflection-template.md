@@ -19,7 +19,7 @@ status: ""
 
 ## My Position Statement (Pre-AI)
 
-*Write this section BEFORE using AI. What is your position, what matters most, and what is non-negotiable? Even a few sentences counts. If the assignment is low-stakes and you did not write one, note that and explain why.*
+*Write this section BEFORE using AI. What is your position, what matters most, and what is non-negotiable? Even a few sentences counts.*
 
 **My position:**
 

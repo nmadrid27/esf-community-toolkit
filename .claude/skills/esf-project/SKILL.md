@@ -290,7 +290,7 @@ Display the full document in chat for the user to review:
 [Summary of the user's direction, with file path]
 ```
 
-The user must confirm the scope before building begins. Save the confirmed scope to `projects/[context]/project-scope-[project-slug].md`.
+The user must confirm the scope before building begins. Save the confirmed scope to `projects/[context]/project-scope-[project-slug].md`. The blank template is at `templates/project-scope-template.md`.
 
 The Companion adapts this structure to the project. A short personal project may only need Overview, Deliverables, and Boundaries. A complex build may need all sections. Do not force every project through the full template.
 
@@ -409,6 +409,8 @@ The Five Questions are the full ownership audit, deeper than the per-piece Check
 3. **Did I verify?** Have I checked the parts that matter, not just trusted they work?
 4. **Would I teach this?** Do I understand this well enough to explain it to someone else?
 5. **Is my disclosure honest?** Does my AI Use Log accurately describe what I did and what AI did?
+
+**Gate record:** After each Five Questions checkpoint, save the results to `projects/[context]/gate-records/[project-slug]-gate-[phase]-[YYYY-MM-DD].md` with the Y/N answers, the checkpoint context (which section or phase transition), and any notes the user provided. This makes gate decisions visible across sessions and supports the reflection in Phase 5.
 
 ---
 
