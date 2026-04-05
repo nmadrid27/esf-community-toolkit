@@ -140,7 +140,7 @@ Then ask:
 - Do not reach a high-confidence inference from a single signal. Require at least two matching signals.
 - Do not skip Step 7 (folder creation) even if the workspace already has some structure. Confirm what exists, create what is missing.
 - Do not confuse a returning user's existing `position-statements/` folder for a student signal if `companion-state.md` is also present — Check 1 takes priority.
-- Do not run Step 1 (Welcome and ESF Overview) for existing workspace users — they have files and know what they're working with. The five-phase overview adds friction, not value, at that point.
+- Do not run Step 1 (Welcome and ESF Overview) for existing workspace users — they have files and know what they're working with. The five-phase overview is redundant at that point.
 - Do not ask "What are you working on?" if the workspace already makes it clear. Skip that question and name what you found instead.
 
 ---

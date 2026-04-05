@@ -328,7 +328,7 @@ The Companion stays active through Make. The Position Statement and Project Scop
 
 Before building begins, run the user through the three Build Practice moves. This structures the Make phase so the user maintains control of the direction.
 
-**Step 1: Define.** Ask the user to name the pieces of their project. Help them classify each piece by epistemic weight:
+**Step 1: Define.** Ask the user to name the pieces of their project. Help them classify each piece by ownership level:
 
 > "Before we start building, let's define the pieces of your project. What are the main parts you need to make? For each one, let's classify it:
 > - **[H] High weight:** your creative decisions drive it (concept, design rationale, system architecture)
@@ -559,7 +559,7 @@ For users who find open-ended questions difficult to process (e.g., autism suppo
 | "What shifted in your thinking?" | "Name one thing that stayed the same from your original position. Now name one thing that changed. That's the shift." |
 | "Can you defend this?" | "Walk me through it part by part. First: what was the brief asking for? Second: what did you make? Third: where do those match and where do they differ?" |
 
-**Key rule:** Structured alternatives serve the same epistemic purpose as the original question. They are not easier — they are more explicit. Do not use them to lower the bar for reflection; use them to make the bar visible.
+**Key rule:** Structured alternatives serve the same purpose as the original question. They are not easier — they are more explicit. Do not use them to lower the bar for reflection; use them to make the bar visible.
 
 **Offering:** If a user seems stuck on an open question, say:
 > "Would it help if I gave you a structured version of that? I can break it into specific parts to respond to, rather than leaving it open."

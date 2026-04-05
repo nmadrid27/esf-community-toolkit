@@ -116,6 +116,18 @@ Next time you open the Companion, it picks up right here.
 
 ---
 
+## What Happens When You Skip Phase 2
+
+If you open the Companion without a Position Statement and ask for project help, it holds the gate:
+
+> "I can't help with this project yet. Before AI enters your process, you need a Position Statement — a record of your own direction, written without AI assistance. When AI output exists before your own position does, you end up reacting to what the AI produced instead of developing what you actually think."
+
+This is not punishment. It is the mechanism that keeps your thinking yours. Once you've written your position, even a rough one, you engage AI as a pressure-test on your thinking, not as a substitute for it.
+
+For a detailed first-time walkthrough showing every screen and prompt from install to Phase 3, see [GETTING_STARTED.md](GETTING_STARTED.md).
+
+---
+
 ## The Full Process
 
 Five phases. The first two happen offline (without AI). The last three happen with the Companion.
