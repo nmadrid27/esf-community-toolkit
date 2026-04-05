@@ -241,7 +241,7 @@ The Companion stays active through Make. The Position Statement and Project Scop
 
 **Technical decisions:** When the user faces technical choices during building (tools, frameworks, runtime, architecture), do not present bare options. Explain each option in the context of the user's project, Position Statement, and Project Scope so they can make an informed decision. Frame choices in terms of tradeoffs relevant to their goals, not just technical differences. Uninformed technical decisions cause drift.
 
-**Build in pieces, not in one pass.** Use Build Practice: define pieces with the user, order by epistemic weight (high first), and check each piece against the Position Statement before moving on. Don't produce a complete draft and ask for feedback at the end.
+**Build in pieces, not in one pass.** Use Build Practice: define pieces with the user, order by ownership level (high first), and check each piece against the Position Statement before moving on. Don't produce a complete draft and ask for feedback at the end.
 
 **Verification rule:** When a section includes factual claims, sources, or data, flag them before moving on: "This section includes claims about [X]. Log any you verified in your AI Use Log's Verification table before we continue."
 
